@@ -1,0 +1,17 @@
+<vbox>
+    <hbox>
+        <dropdown id="calc_Selector" text="Select Item" searchable="true" width="800">
+            <data>
+                <item text="Generic FTL Duration Calculator" value="ftl-duration"/>
+                <item text="Item 3" />
+                <item text="Item 4" />
+                <item text="Item 5" />
+                <item text="Item 6" />
+                <item text="Item 7" />
+                <item text="Item 8" />
+                <item text="Item 9" />
+            </data>
+        </dropdown>
+    </hbox>
+    <vbox id="frame1"></vbox>
+</vbox>

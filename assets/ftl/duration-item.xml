@@ -1,0 +1,22 @@
+<hbox>
+    <textfield placeholder="distance"  width="100"/>
+    <dropdown text="Distance Metric" width="200">
+        <data>
+            <item text="Ly. (Light-years)" value="1"/>
+            <item text="AU. (Astronomic Units)"  value="0.0000xyz"/>
+            <item text="Pcs. (Parsecs)" value="0.515"/>
+            <item text="km. (Kilometer)" value="0.515"/>
+            <item text="mi. (Mile)" value="0.515"/>
+        </data>
+    </dropdown>
+    <textfield placeholder="speed"  width="100"/>
+    <dropdown text="Speed Metric"  width="200">
+        <data>
+            <item text="Ly per Year" value="1"/>
+            <item text="AU per Hour"  value="0.0000xyz"/>
+            <item text="Pcs per Year" value="0.515"/>
+            <item text="KM per Hour"  value="0.0000xyz"/>
+            <item text="Miles per Hour"  value="0.0000xyz"/>
+        </data>
+    </dropdown>
+</hbox>
