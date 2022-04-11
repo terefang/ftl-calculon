@@ -10,8 +10,20 @@ import haxe.ui.containers.HBox;
 import haxe.ui.events.MouseEvent;
 
 @:build(haxe.ui.ComponentBuilder.build("assets/ftl/duration-item.xml"))
-class FtlDurationLYItem extends HBox {
-    public function new() {
+class FtlDurationLYItem extends HBox 
+{
+    var _parent:Component;
+    
+    public function new(componenet:Component) 
+    {
         super();
+        _parent = componenet;
+    }
+
+    @:bind(btn_del, MouseEvent.CLICK)
+    private function onMyButton(e:MouseEvent) 
+    {
+        _parent.removeComponent(this, true, false);
+        _parent.invalidateComponentLayout();
     }
 }

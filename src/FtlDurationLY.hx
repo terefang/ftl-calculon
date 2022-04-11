@@ -13,11 +13,18 @@ import haxe.ui.events.MouseEvent;
 class FtlDurationLY extends VBox {
     public function new() {
         super();
+        this.autoHeight = true;
+        this.percentHeight = null;
     }
 
     @:bind(btn_1, MouseEvent.CLICK)
-    private function onMyButton(e:MouseEvent) {
-        paths.addComponent(new FtlDurationLYItem());
+    private function onMyButton1(e:MouseEvent) {
+        paths.addComponent(new FtlDurationLYItem(this));
+    }
+
+    @:bind(btn_2, MouseEvent.CLICK)
+    private function onMyButton2(e:MouseEvent) {
+        paths.removeAllComponents();
     }
 
     @:bind(btn_calc, MouseEvent.CLICK)

@@ -2,9 +2,10 @@
         <frame text="Generic FTL Duration Calculation">
         <vbox>
             <hbox>
-                <button id="btn_1" text="+"/>
-                <button id="btn_calc" text="Calculate!"/>
+            <button id="btn_1" text="+"/>
+            <button id="btn_2" text="X"/>
             </hbox>
+
             <frame text="Paths" width="800">
                 <vbox id="paths"></vbox>
             </frame>
@@ -25,7 +26,7 @@
                     </hbox>
                 </vbox>
             </frame>
-
+            <button id="btn_calc" text="Calculate!"/>
         </vbox>
     </frame>
 </vbox>

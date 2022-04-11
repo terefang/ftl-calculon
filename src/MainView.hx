@@ -22,6 +22,7 @@ class MainView extends VBox {
             {
             case "ftl-duration":
                 _d = new FtlDurationLY();
+                canvasView1.line(0,0,100,100);
             default:
                 _d=null;
             }
@@ -31,6 +32,7 @@ class MainView extends VBox {
             frame1.addComponent(_d);
             }
         }
+
     }
 
 }

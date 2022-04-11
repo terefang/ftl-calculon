@@ -1,22 +1,25 @@
 <hbox>
-    <textfield placeholder="distance"  width="100"/>
+    <button id="btn_del" text="-"/>
+    <number-stepper  width="100" step=".001" precision="3"/>
     <dropdown text="Distance Metric" width="200">
         <data>
-            <item text="Ly. (Light-years)" value="1"/>
-            <item text="AU. (Astronomic Units)"  value="0.0000xyz"/>
-            <item text="Pcs. (Parsecs)" value="0.515"/>
-            <item text="km. (Kilometer)" value="0.515"/>
-            <item text="mi. (Mile)" value="0.515"/>
+            <item text="Ly. (Light-years)" value="ly"/>
+            <item text="AU. (Astronomic Units)"  value="au"/>
+            <item text="Pcs. (Parsecs)" value="pc"/>
+            <item text="km. (Kilometer)" value="km"/>
+            <item text="mi. (Mile)" value="mi"/>
         </data>
     </dropdown>
-    <textfield placeholder="speed"  width="100"/>
+    <number-stepper  width="100" step=".001" precision="3"/>
     <dropdown text="Speed Metric"  width="200">
         <data>
-            <item text="Ly per Year" value="1"/>
-            <item text="AU per Hour"  value="0.0000xyz"/>
-            <item text="Pcs per Year" value="0.515"/>
-            <item text="KM per Hour"  value="0.0000xyz"/>
-            <item text="Miles per Hour"  value="0.0000xyz"/>
+            <item text="Ly per Year" value="lya"/>
+            <item text="g (Acceleration)"  value="ga"/>
+            <item text="AU per Hour"  value="auh"/>
+            <item text="Pcs per Year" value="pca"/>
+            <item text="KM per Hour"  value="kmh"/>
+            <item text="KM per Second"  value="kms"/>
+            <item text="Miles per Hour"  value="mih"/>
         </data>
     </dropdown>
 </hbox>

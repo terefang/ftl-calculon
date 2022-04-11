@@ -1,6 +1,6 @@
 <vbox>
     <hbox>
-        <dropdown id="calc_Selector" text="Select Item" searchable="true" width="800">
+        <dropdown id="calc_Selector" text="Select" searchable="true" width="800">
             <data>
                 <item text="Generic FTL Duration Calculator" value="ftl-duration"/>
                 <item text="Item 3" />
@@ -14,4 +14,5 @@
         </dropdown>
     </hbox>
     <vbox id="frame1"></vbox>
+    <canvas-view id="canvasView1"/>
 </vbox>
