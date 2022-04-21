@@ -19,7 +19,7 @@ class FtlDurationLY extends VBox {
 
     @:bind(btn_1, MouseEvent.CLICK)
     private function onMyButton1(e:MouseEvent) {
-        paths.addComponent(new FtlDurationLYItem(this));
+        paths.addComponent(new FtlDurationLYItem(paths));
     }
 
     @:bind(btn_2, MouseEvent.CLICK)

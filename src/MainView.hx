@@ -1,8 +1,7 @@
 package ;
 
 import haxe.ui.containers.VBox;
-import haxe.ui.events.MouseEvent;
-import haxe.ui.events.UIEvent;
+import haxe.ui.containers.menus.Menu;
 
 @:build(haxe.ui.ComponentBuilder.build("assets/main-view.xml"))
 class MainView extends VBox {
@@ -12,27 +11,23 @@ class MainView extends VBox {
 
     var _d = null;
 
-    @:bind(calc_Selector, UIEvent.PROPERTY_CHANGE)
-    private function onSelChange(e:UIEvent)
+    @:bind(ftlMenu, MenuEvent.MENU_SELECTED)
+    private function onClickMenu(e:MenuEvent)
     {
         frame1.removeComponentAt(0);
-        if(calc_Selector.selectedItem != null)
+        switch e.menuItem.id
         {
-            switch calc_Selector.selectedItem.value
-            {
-            case "ftl-duration":
-                _d = new FtlDurationLY();
-                canvasView1.line(0,0,100,100);
-            default:
-                _d=null;
-            }
-
-            if(_d != null)
-            {
-            frame1.addComponent(_d);
-            }
+        case "ftl-duration":
+            _d = new FtlDurationLY();
+            //canvasView1.line(0,0,100,100);
+        default:
+            _d=null;
         }
 
+        if(_d != null)
+        {
+        frame1.addComponent(_d);
+        }
     }
 
 }

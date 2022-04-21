@@ -14,16 +14,30 @@ class FtlDurationLYItem extends HBox
 {
     var _parent:Component;
     
-    public function new(componenet:Component) 
+    public function new(comp:Component)
     {
         super();
-        _parent = componenet;
+        _parent = comp;
     }
 
     @:bind(btn_del, MouseEvent.CLICK)
     private function onMyButton(e:MouseEvent) 
     {
-        _parent.removeComponent(this, true, false);
-        _parent.invalidateComponentLayout();
+        _parent.removeComponent(this);
+    }
+
+    public function calcDistanceKM():Float
+    {
+        var _dist = distValueComp.pos;
+        switch(distMetricComp.selectedItem.value)
+        {
+            case "km": {
+                _dist *= 1000;
+            }
+            case "mi": {
+                _dist *= 1609.34;
+            }
+        }
+        return 0.0;
     }
 }

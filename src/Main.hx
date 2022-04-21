@@ -9,13 +9,18 @@ class Main
 {
     public static function main()
     {
-        //Toolkit.backendProperties.setProp("haxe.ui.html5.container", "d3");
+#if _OPENFL_
+        var app = new HaxeUIApp();
+#else
+        //Toolkit.init({container: Browser.document.getElementById('d3')});
 
         var app = new HaxeUIApp({container: Browser.document.getElementById('d3')});
+#end
         app.ready(function() {
             app.addComponent(new MainView());
 
             app.start();
         });
+        
     }
 }

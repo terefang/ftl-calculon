@@ -1,0 +1,9 @@
+-cp src
+-main Main
+
+-lib hx3compat:git:https://github.com/HaxeFoundation/hx3compat
+-lib hscript:git:https://github.com/HaxeFoundation/hscript
+-lib haxeui-core:git:https://github.com/haxeui/haxeui-core
+-lib haxeui-html5:git:https://github.com/haxeui/haxeui-html5
+
+-js build/html5/Main.js

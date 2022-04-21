@@ -1,18 +1,16 @@
-<vbox>
-    <hbox>
-        <dropdown id="calc_Selector" text="Select" searchable="true" width="800">
-            <data>
-                <item text="Generic FTL Duration Calculator" value="ftl-duration"/>
-                <item text="Item 3" />
-                <item text="Item 4" />
-                <item text="Item 5" />
-                <item text="Item 6" />
-                <item text="Item 7" />
-                <item text="Item 8" />
-                <item text="Item 9" />
-            </data>
-        </dropdown>
-    </hbox>
-    <vbox id="frame1"></vbox>
-    <canvas-view id="canvasView1"/>
+<vbox width="100%" >
+    <menubar id="ftlMenu" width="100%">
+        <menu text="Normal">
+            <menuitem text="Generic FTL Duration Calculator" shortcutText="Shortcut" id="ftl-duration"/>
+            <menuseparator />
+            <menuitem text="Item 3" shortcutText="Ctrl+B" />
+            <menuitem text="Item 4" shortcutText="Ctrl+C" />
+            <menuseparator />
+            <menuitem text="Item 5" shortcutText="Ctrl+D" />
+        </menu>
+    </menubar>
+        <vbox width="100%">
+            <vbox id="frame1" width="1000" height="900"></vbox>
+            <!--canvas-view id="canvasView1"/-->
+        </vbox>
 </vbox>

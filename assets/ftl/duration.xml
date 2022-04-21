@@ -1,17 +1,18 @@
-<vbox>
-        <frame text="Generic FTL Duration Calculation">
-        <vbox>
+<vbox width="100%">
+    <frame text="Generic FTL Duration Calculation"  width="100%">
+        <vbox  width="100%">
             <hbox>
             <button id="btn_1" text="+"/>
             <button id="btn_2" text="X"/>
             </hbox>
 
-            <frame text="Paths" width="800">
+            <frame text="Paths" width="100%">
                 <vbox id="paths"></vbox>
             </frame>
 
-            <frame text="Calculation Results" width="800">
-                <vbox>
+
+            <frame text="Calculation Results" width="100%">
+                <vbox width="100%">
                     <hbox>
                         <label verticalAlign="center" textAlign="right" text="Total Duration:" width="200"/>
                         <textfield verticalAlign="center" placeholder="Duration"  width="100"/>
