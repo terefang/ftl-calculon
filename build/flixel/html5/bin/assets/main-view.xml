@@ -1,0 +1,17 @@
+<vbox width="100%" >
+    <menubar id="ftlMenu" width="100%">
+        <menu text="Normal">
+            <menuitem text="Generic FTL Duration Calculator" shortcutText="Shortcut" id="ftl-duration"/>
+            <menuseparator />
+            <menuitem text="Item 3" shortcutText="Ctrl+B" />
+            <menuitem text="Item 4" shortcutText="Ctrl+C" />
+            <menuseparator />
+            <menuitem text="Item 5" shortcutText="Ctrl+D" />
+        </menu>
+    </menubar>
+        <vbox width="100%">
+            <vbox id="frame1" width="1000" height="300">
+
+            </vbox>
+        </vbox>
+</vbox>

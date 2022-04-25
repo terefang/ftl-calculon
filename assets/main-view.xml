@@ -10,7 +10,8 @@
         </menu>
     </menubar>
         <vbox width="100%">
-            <vbox id="frame1" width="1000" height="900"></vbox>
-            <!--canvas-view id="canvasView1"/-->
+            <vbox id="frame1" width="1000" height="300">
+
+            </vbox>
         </vbox>
 </vbox>

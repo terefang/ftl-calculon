@@ -1,0 +1,33 @@
+<vbox width="100%">
+    <frame text="Generic FTL Duration Calculation"  width="100%">
+        <vbox  width="100%">
+            <hbox>
+            <button id="btn_1" text="+"/>
+            <button id="btn_2" text="X"/>
+            </hbox>
+
+            <frame text="Paths" width="100%">
+                <vbox id="paths"></vbox>
+            </frame>
+
+
+            <frame text="Calculation Results" width="100%">
+                <vbox width="100%">
+                    <hbox>
+                        <label verticalAlign="center" textAlign="right" text="Total Duration:" width="200"/>
+                        <textfield verticalAlign="center" placeholder="Duration"  width="100"/>
+                    </hbox>
+                    <hbox>
+                        <label verticalAlign="center" textAlign="right" text="Total Distance:" width="200"/>
+                        <textfield verticalAlign="center" placeholder="Distance"  width="100"/>
+                    </hbox>
+                    <hbox>
+                        <label verticalAlign="center" textAlign="right" text="Average Speed:" width="200"/>
+                        <textfield verticalAlign="center" placeholder="Speed"  width="100"/>
+                    </hbox>
+                </vbox>
+            </frame>
+            <button id="btn_calc" text="Calculate!"/>
+        </vbox>
+    </frame>
+</vbox>

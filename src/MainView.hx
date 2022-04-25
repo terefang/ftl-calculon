@@ -2,6 +2,7 @@ package ;
 
 import haxe.ui.containers.VBox;
 import haxe.ui.containers.menus.Menu;
+import js.html.Gamepad;
 
 @:build(haxe.ui.ComponentBuilder.build("assets/main-view.xml"))
 class MainView extends VBox {

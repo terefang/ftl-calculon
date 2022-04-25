@@ -44,26 +44,40 @@ case "$HXCMD" in
     tar -xf $TMPDIR/neko.tgz -C $HXDIR --strip 1
     $EXE -P $PXDIR haxelib newrepo
     $EXE -P $PXDIR haxelib setup $HXLIB
-    $EXE -P $PXDIR haxelib install build-html5.hxml --skip-dependencies --always
+    ##$EXE -P $PXDIR haxelib install build-html5.hxml --skip-dependencies --always
+    $EXE -P $PXDIR haxelib git hx3compat https://github.com/HaxeFoundation/hx3compat
+    $EXE -P $PXDIR haxelib git hscript https://github.com/HaxeFoundation/hscript
+    $EXE -P $PXDIR haxelib git haxeui-core https://github.com/haxeui/haxeui-core
+    $EXE -P $PXDIR haxelib git haxeui-html5 https://github.com/haxeui/haxeui-html5
+    $EXE -P $PXDIR haxelib git heaps https://github.com/HeapsIO/heaps.git
+    $EXE -P $PXDIR haxelib git hide https://github.com/HeapsIO/hide.git
+    ##$EXE -P $PXDIR haxelib install hlopenal
+    ##$EXE -P $PXDIR haxelib install hlsdl
+    ##$EXE -P $PXDIR haxelib install hldx
+    $EXE -P $PXDIR haxelib git haxeui-heaps https://github.com/haxeui/haxeui-heaps --never
     $EXE -P $PXDIR haxelib install lime
     $EXE -P $PXDIR haxelib install openfl
     $EXE -P $PXDIR haxelib install flixel
     $EXE -P $PXDIR haxelib git haxeui-flixel https://github.com/haxeui/haxeui-flixel
     $EXE -P $PXDIR haxelib run lime setup flixel
-    $EXE -P $PXDIR haxelib run lime setup linux
-    $EXE -P $PXDIR haxelib run lime build linux
+    $EXE -P $PXDIR haxelib run lime setup html5
     $EXE -P $PXDIR haxelib install flixel-tools
-    $EXE -P $PXDIR haxelib run flixel-tools setup
+    ##$EXE -P $PXDIR haxelib run flixel-tools setup
     ;;
   -build)
     $EXE -P $PXDIR  -build-html5
     $EXE -P $PXDIR  -build-flixel
+    $EXE -P $PXDIR  -build-heaps
     ;;
   -build-html5)
     $HXDIR/haxe --verbose build-html5.hxml
     ;;
+  -build-heaps)
+    $HXDIR/haxe --verbose build-heaps-js.hxml
+    ;;
   -build-flixel)
-    $HXDIR/haxelib run lime test html5
+    $HXDIR/haxelib run lime build html5
+    ##$HXDIR/haxelib run lime test html5
     ;;
   *)
     $HXDIR/$HXCMD "$@"

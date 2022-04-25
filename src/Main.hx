@@ -11,6 +11,8 @@ class Main
     {
 #if _OPENFL_
         var app = new HaxeUIApp();
+#elseif _HEAPS_
+        var app = new HaxeUIApp();
 #else
         //Toolkit.init({container: Browser.document.getElementById('d3')});
 

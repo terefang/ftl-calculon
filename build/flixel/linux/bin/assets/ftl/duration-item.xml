@@ -1,0 +1,38 @@
+<hbox width="100%">
+    <button id="btn_del" text="-"/>
+    <number-stepper id="distValueComp" width="100" step=".001" precision="3"/>
+    <dropdown id="distMetricComp" text="Distance Metric" width="200">
+        <data>
+            <item text="Ly. (Light-years)" value="ly"/>
+            <item text="AU. (Astronomic Units)"  value="au"/>
+            <item text="Pcs. (Parsecs)" value="pc"/>
+            <item text="km. (Kilometer)" value="km"/>
+            <item text="mi. (Mile)" value="mi"/>
+        </data>
+    </dropdown>
+    <number-stepper id="speedValueComp" width="100" step=".001" precision="3"/>
+    <dropdown id="speedMetricComp" text="Speed Metric"  width="200">
+        <data>
+            <item text="Warp Factor (TOS)" value="wf-tos"/><!-- V/c = WF^3 -->
+            <item text="Warp Factor (TNG/FASA)" value="wf-tng-fasa"/><!-- V/c = WF^5 -->
+            <item text="Warp Factor (TNG)" value="wf-tng"/>
+            <!-- V/c = WF^(10/3)
+            V/c = WF^[<(10/3)+a*(-Ln(10-WF))^n>+f1*((WF-9)^5)+f2*((WF-9)^11)]
+
+            Where a is the subspace field density,
+            n is the electromagnetic flux,
+            and f1 and f2 are the Cochrane refraction and reflection indexes respectively.
+            Under ideal conditions values of a = 0.00264320, n = 2.87926700,
+            f1 = 0.06274120 and f2 = 0.32574600 can be expected within
+            a "normal" area of deep interstellar space.
+            -->
+            <item text="Ly per Year" value="lya"/>
+            <item text="g (Acceleration)"  value="ga"/>
+            <item text="AU per Hour"  value="auh"/>
+            <item text="Pcs per Year" value="pca"/>
+            <item text="KM per Hour"  value="kmh"/>
+            <item text="KM per Second"  value="kms"/>
+            <item text="Miles per Hour"  value="mih"/>
+        </data>
+    </dropdown>
+</hbox>
